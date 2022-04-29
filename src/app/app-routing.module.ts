@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'primeiro-andar',
     loadChildren: () => import('./primeiro-andar/primeiro-andar.module').then( m => m.PrimeiroAndarPageModule)
+  },
+  {
+    path: 'segundo-andar',
+    loadChildren: () => import('./segundo-andar/segundo-andar.module').then( m => m.SegundoAndarPageModule)
   }
 ];
 @NgModule({
