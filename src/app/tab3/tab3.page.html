@@ -1,17 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title >
-      Perfil do Usuario
-    </ion-title>
+    <ion-item>
+    <ion-avatar>
+      <img src="https://avatars.githubusercontent.com/u/101908931?v=4" style="max-width: 45px; max-height: 45px;">
+    </ion-avatar>
+    <ion-title style="display: inline;">Seu Perfil</ion-title>
+    <ion-icon style="display: inline; margin: 5px;" name="search-outline"></ion-icon>
+    <ion-icon style="display: inline; margin: 5px;" name="add-outline"></ion-icon>
+  </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <img style="max-width: 85px; max-height: 85px;" src="https://i.ytimg.com/vi/k9kAg7tz934/maxresdefault.jpg" >
+      <ion-label style="text-align: center;">Monitor quebrado no laboratório 5</ion-label>
+    </ion-item>
+  </ion-list>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+
 </ion-content>
