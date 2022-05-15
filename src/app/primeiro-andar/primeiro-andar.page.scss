@@ -1,17 +1,23 @@
 .card{
   width: 230px;
-  height: 300px;
-  justify-items: center;
+  height: 180px;
+  display: block;
 }
 
 .imagem{
   max-width: 130px;
   max-height: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .grid{
   content: center;
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
+}
+
+.botao{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
