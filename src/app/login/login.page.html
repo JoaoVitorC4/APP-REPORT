@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title class="filhos-centralizados">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<ion-label>login</ion-label>
+
+<ion-content style="text-align:center; margin-top: auto; margin-bottom: auto;">
+  <form [formGroup]="login">
+    <ion-card>
+      <br>
+      <ion-label style="font-size:x-large; margin-left: 9px;">Usuário:</ion-label>
+      <br>
+      <ion-textarea formControlName="usuario" style="font-size:large;" placeholder="Infome o usuário"></ion-textarea>
+    </ion-card>
+
+    <ion-card>
+      <br>
+      <ion-label style="font-size:x-large; margin-left: 9px;">Senha:</ion-label>
+      <br>
+      <ion-input formControlName="senha" style="font-size:large;" placeholder="Informe a senha"></ion-input>
+    </ion-card>
+
+    <ion-button style="font-size:x-large;" type="submit" color="success">Login</ion-button>
+  </form>
 </ion-content>
