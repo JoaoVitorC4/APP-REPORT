@@ -7,10 +7,17 @@
 </ion-header>
 
 <ion-content>
-  <form>
+  <form [formGroup]="formulario">
+    <ion-card >
+      <br>
+      <ion-label style="font-size:large; margin-left: 9px;">Qual o problema e ser relatado?</ion-label>
+      <br>
+      <ion-textarea formControlName="descricao" placeholder="Insira as informações do problema relatado..."></ion-textarea>
+    </ion-card>
+
     <ion-card>
-      <ion-label>Qual o problema e ser relatado?</ion-label>
-      <ion-textarea placeholder="Insira as informações do problema relatado..."></ion-textarea>
+      <ion-label style="font-size:large; margin-left: 9px;">Selecione uma foto do problema</ion-label>
+      <ion-input formControlName="imagem" type="file" aceept accept="image/*"></ion-input>
     </ion-card>
   </form>
 </ion-content>
