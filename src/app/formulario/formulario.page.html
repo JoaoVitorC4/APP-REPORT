@@ -6,20 +6,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content style="top:25%;">
   <form [formGroup]="formulario">
     <ion-card >
       <br>
-      <ion-label style="font-size:large; margin-left: 9px;">Qual o problema e ser relatado?</ion-label>
+      <ion-label style="font-size:x-large; margin-left: 9px;">Qual o problema e ser relatado?</ion-label>
       <br>
       <ion-textarea formControlName="descricao" placeholder="Insira as informações do problema relatado..."></ion-textarea>
     </ion-card>
 
     <ion-card>
-      <ion-label style="font-size:large; margin-left: 9px;">Selecione uma foto do problema</ion-label>
+      <ion-label style="font-size:x-large; margin-left: 9px;">Selecione uma foto do problema</ion-label>
       <ion-input formControlName="imagem" type="file" aceept accept="image/*"></ion-input>
     </ion-card>
-
-    <ion-button type="submit">Enviar Reporte</ion-button>
+    <br>
+    <ion-button style="font-size:large; margin-left: 40%;"  type="submit">Enviar</ion-button>
   </form>
 </ion-content>
