@@ -5,7 +5,7 @@ import { Report } from '../models/reports.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ReporteService {
+export class ReportService {
 
   private api = "http://127.0.0.1:8000/api";
 

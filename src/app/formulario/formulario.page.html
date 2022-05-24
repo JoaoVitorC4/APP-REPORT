@@ -12,14 +12,14 @@
       <br>
       <ion-label style="font-size:x-large; margin-left: 9px;">Qual o problema e ser relatado?</ion-label>
       <br>
-      <ion-textarea formControlName="descricao" placeholder="Insira as informações do problema relatado..."></ion-textarea>
+      <ion-textarea formControlName="description" placeholder="Insira as informações do problema relatado..."></ion-textarea>
     </ion-card>
 
     <ion-card>
       <ion-label style="font-size:x-large; margin-left: 9px;">Selecione uma foto do problema</ion-label>
-      <ion-input formControlName="imagem" type="file" aceept accept="image/*"></ion-input>
+      <ion-input formControlName="image" type="file" aceept accept="image/*"></ion-input>
     </ion-card>
     <br>
-    <ion-button style="font-size:large; margin-left: 40%;"  type="submit">Enviar</ion-button>
+    <ion-button (click)="salvarReports()" [disabled]="formulario.invalid" style="font-size:large; margin-left: 40%;"  type="submit">Enviar</ion-button>
   </form>
 </ion-content>
