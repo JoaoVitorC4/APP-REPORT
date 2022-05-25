@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastrar',
@@ -7,19 +7,25 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./cadastrar.page.scss'],
 })
 export class CadastrarPage implements OnInit {
-  public formulario:FormGroup;
+  public cadastrar:FormGroup;
 
   constructor(
     private formBuilder:FormBuilder,
   ) { }
 
   ngOnInit() {
-    
+    this.setarFormulario();
   }
 
   private setarFormulario() {
-    this.formulario = this.formBuilder.group({
-      description: [ , Validators.required],
+    this.cadastrar = this.formBuilder.group({
+      name: [ , Validators.required],
+      gender: [ , Validators.required],
+      birth: [ , Validators.required],
+      address: [ , Validators.required],
+      phone: [ , Validators.required],
+      email: [ , Validators.required],
+      password: [ , Validators.required],
       // imagem: [ , Validators.required],
       image: [ , ],
     });

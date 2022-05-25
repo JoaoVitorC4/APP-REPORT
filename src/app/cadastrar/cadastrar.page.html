@@ -1,38 +1,72 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Cadastrar-se</ion-title>
+    <ion-title class="filhos-centralizados">Cadastrar-se</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content style="text-align:center; top:25%;">
+<ion-content>
   <form [formGroup]="cadastrar">
     <ion-card>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Nome:</ion-label>
-      <ion-label formControlName="nome"></ion-label>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Data de Nascimento:</ion-label>
-      <ion-label type="date" formControlName="nascimento"></ion-label>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Endereço:</ion-label>
-      <ion-label formControlName="endereco"></ion-label>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Telefone:</ion-label>
-      <ion-label formControlName="telefone"></ion-label>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Email:</ion-label>
-      <ion-label formControlName="email"></ion-label>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Senha:</ion-label>
-      <ion-label type="password" formControlName="senha"></ion-label>
-      <br>
-      <ion-label style=" margin-left: 9px;" position="floating">Confirme a senha:</ion-label>
-      <ion-label type="password" formControlName="cofirmasenha"></ion-label>
-      <br>
-      <ion-label style="margin-left: 9px;">Selecione uma foto de perfil</ion-label>
-      <ion-input formControlName="image" type="file" aceept accept="image/*"></ion-input>
-    
-    <ion-button type="submit" color="success">Cadastrar-se</ion-button>
-  </ion-card>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-list>
+        <ion-radio-group value="gereno">
+          <ion-list-header>
+            <ion-label>Selecione o Genero:</ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Masculino</ion-label>
+            <ion-radio slot="start" value="masculino"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Feminino</ion-label>
+            <ion-radio slot="start" value="feminino"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Prefiro não dizer</ion-label>
+            <ion-radio slot="start" value="indefinido"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <ion-item>
+        <ion-label >Data de Nascimento:</ion-label>
+        <ion-input type="date" formControlName="birth"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Endereço:</ion-label>
+        <ion-input formControlName="address"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Telefone:</ion-label>
+        <ion-input formControlName="phone"></ion-input>
+      </ion-item> 
+
+      <ion-item>
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Senha:</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <!-- <ion-label position="floating">Confirme a senha:</ion-label>
+      <ion-input type="password" formControlName="cofirmpassword"></ion-input>
+      <ion-item>-->
+      <ion-item>
+        <ion-label >Selecione uma foto de perfil</ion-label>
+        <ion-input formControlName="image" type="file" aceept accept="image/*"></ion-input>
+      </ion-item>
+    </ion-card>
+      <ion-button expand="full" type="submit" color="success">Cadastrar-se</ion-button>
   </form>
 </ion-content>
