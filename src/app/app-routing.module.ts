@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'formulario',
     loadChildren: () => import('./formulario/formulario.module').then( m => m.FormularioPageModule)
+  },
+  {
+    path: 'cadastrar',
+    loadChildren: () => import('./cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
   }
 ];
 @NgModule({
