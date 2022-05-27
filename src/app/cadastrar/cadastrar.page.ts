@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, NgModule, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, NgModel, NgModelGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
@@ -23,6 +23,7 @@ export class CadastrarPage implements OnInit {
   }
 
   public cadastraUsuario(){
+    // if(this.cadastrar.controls.password.value == )
     console.log(this.cadastrar.value);
     this.userservice.salvarUser(this.cadastrar.value).
     then(res => {

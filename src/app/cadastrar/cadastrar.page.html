@@ -54,9 +54,12 @@
         <ion-label position="floating">Senha:</ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
-      <!-- <ion-label position="floating">Confirme a senha:</ion-label>
-      <ion-input type="password" formControlName="cofirmpassword"></ion-input>
-      <ion-item>-->
+
+      <ion-item>
+      <ion-label position="floating">Confirme a senha:</ion-label>
+      <ion-input type="password" [(ngMoldel)]="confirmpassword"  [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+      
       <ion-item>
         <ion-label >Selecione uma foto de perfil</ion-label>
         <ion-input formControlName="image" type="file" aceept accept="image/*"></ion-input>
