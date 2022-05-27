@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -11,10 +13,21 @@ export class CadastrarPage implements OnInit {
 
   constructor(
     private formBuilder:FormBuilder,
+    private userservice:UserService,
+    private rota: Router
   ) { }
 
   ngOnInit() {
     this.setarFormulario();
+  }
+
+  public cadastraUsuario(){
+    console.log(this.cadastrar.value);
+    this.userservice.salvarUser(this.cadastrar.value).
+    then(res => {
+      console.log(res)
+      this.rota.navigate([`/login`])
+    }, error => console.error(error));
   }
 
   private setarFormulario() {
@@ -22,11 +35,9 @@ export class CadastrarPage implements OnInit {
       name: [ , Validators.required],
       gender: [ , Validators.required],
       birth: [ , Validators.required],
-      address: [ , Validators.required],
       phone: [ , Validators.required],
       email: [ , Validators.required],
       password: [ , Validators.required],
-      // imagem: [ , Validators.required],
       image: [ , ],
     });
   }
