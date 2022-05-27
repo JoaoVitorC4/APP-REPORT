@@ -18,6 +18,7 @@ export class CadastrarPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.cadastrar);
     this.setarFormulario();
   }
 

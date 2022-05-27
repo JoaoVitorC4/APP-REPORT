@@ -3,7 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./formulario/formulario.module').then( m => m.FormularioPageModule)
   },
   {
-    path: 'cadastrar',
+    path: '',
     loadChildren: () => import('./cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
   }
 ];

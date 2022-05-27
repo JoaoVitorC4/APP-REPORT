@@ -13,7 +13,7 @@
       </ion-item>
 
       <ion-list>
-        <ion-radio-group value="gereno">
+        <ion-radio-group formControlName="gender" value="geneno">
           <ion-list-header>
             <ion-label>Selecione o Genero:</ion-label>
           </ion-list-header>
@@ -62,6 +62,7 @@
         <ion-input formControlName="image" type="file" aceept accept="image/*"></ion-input>
       </ion-item>
     </ion-card>
-      <ion-button (click)="cadastraUsuario()" [disabled]="formulario.invalid" expand="full" type="submit" color="success">Cadastrar-se</ion-button>
+      <ion-button (click)="cadastraUsuario()" [disabled]="cadastrar.invalid" expand="block" type="submit" color="success">Cadastrar-se</ion-button>
   </form>
+      <ion-button expand="block" style="margin-top:15px;" routerLink="/login" color="warning" >Realizar Login</ion-button>
 </ion-content>
