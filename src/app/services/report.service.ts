@@ -21,4 +21,8 @@ export class ReportService {
     return this.http.post(`${this.api}/reports`, report).toPromise();
   }
 
+  // public editaReports(report: Report){
+  //   return this.http.post(`${this.api}/`)
+  // }
+
 }
