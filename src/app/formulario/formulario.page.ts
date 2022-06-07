@@ -24,6 +24,9 @@ export class FormularioPage implements OnInit {
   }
 
   public salvarReports(){
+    this.formulario.patchValue({
+      image: this.base64textString
+    })
     console.log(this.formulario.value);
     this.reportservice.salvarReports(this.formulario.value).
     then(res => {
@@ -37,7 +40,27 @@ export class FormularioPage implements OnInit {
     this.formulario = this.formBuilder.group({
       description: [ , Validators.required],
       // imagem: [ , Validators.required],
-      image: [ , ],
+      image: '',
     });
   }
+
+  base64textString ='';
+
+  onUploadChange(evt: any) {
+  const file = evt.target.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = this.handleReaderLoaded.bind(this);
+    reader.readAsBinaryString(file);
+  }
+}
+
+handleReaderLoaded(e) {
+  this.base64textString ='data:image/png;base64,' + btoa(e.target.result);
+}
+
+
+
 }
