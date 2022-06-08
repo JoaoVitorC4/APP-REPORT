@@ -16,9 +16,9 @@ export class Tab2Page {
     this.buscarReport();
   }
 
-  ionWillEnterView(){
-    this.buscarReport();
-  }
+  // ionWillEnterView(){
+  //   this.buscarReport();
+  // }
 
   public buscarReport() {
     this.reportService.listaReports().subscribe(
