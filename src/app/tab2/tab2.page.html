@@ -11,7 +11,7 @@
       <ion-item-sliding *ngFor="let item of report">
         <ion-item>
           <ion-label>{{ item.description }}  </ion-label>
-          <img src="{{item.image}}">
+          <img style= "width: 270px; height:180px;" src="{{item.image}}">
         </ion-item>
         <ion-item-options side="end">
           <ion-item-option color="warning" (click)="editarProduto(item.id)">Edit</ion-item-option>

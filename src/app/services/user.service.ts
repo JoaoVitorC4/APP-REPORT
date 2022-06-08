@@ -20,5 +20,9 @@ export class UserService {
     return this.http.post(`${this.api}/login`, user).toPromise();
   }
 
+  // public MostradadosUsuario(id: number){
+  //   return this.http.get(`${this.api}/userdata`,id).get;
+  // }
+
 
 }
