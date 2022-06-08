@@ -10,9 +10,9 @@
     <ion-card>
       <br>
       <ion-icon name="person-outline"></ion-icon>
-      <ion-label style="font-size:x-large; margin-left: 9px;">Usuário:</ion-label>
+      <ion-label style="font-size:x-large; margin-left: 9px;">Email:</ion-label>
       <br>
-      <ion-textarea formControlName="usuario" style="font-size:large;" placeholder="Infome o usuário"></ion-textarea>
+      <ion-textarea formControlName="email" style="font-size:large;" placeholder="Infome o Email"></ion-textarea>
     </ion-card>
 
     <ion-card>
@@ -23,7 +23,7 @@
       <ion-input formControlName="senha" style="font-size:large;" placeholder="Informe a senha"></ion-input>
     </ion-card>
 
-    <ion-button routerLink="/tabs" style="font-size:x-large;" type="submit" color="success">Login</ion-button>
+    <ion-button (click)="RealizaLogin()"  [disabled]="login.invalid" style="font-size:x-large;" type="submit" color="success">Login</ion-button>
   </form>
   <h2>
     <ion-label style="font-size: small;">Ainda não tem uma conta?</ion-label>

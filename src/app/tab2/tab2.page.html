@@ -10,7 +10,8 @@
     <ion-list>
       <ion-item-sliding *ngFor="let item of report">
         <ion-item>
-          <ion-label>{{ item.description }}  {{item.image}}</ion-label>
+          <ion-label>{{ item.description }}  </ion-label>
+          <img src="{{item.image}}">
         </ion-item>
         <ion-item-options side="end">
           <ion-item-option color="primary" (click)="visualizarProduto(item)">Ver</ion-item-option>

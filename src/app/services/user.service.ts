@@ -16,5 +16,9 @@ export class UserService {
   public salvarUser(user: User) {
     return this.http.post(`${this.api}/user`, user).toPromise();
   }
+  public Login(user: User){
+    return this.http.post(`${this.api}/login`, user).toPromise();
+  }
+
 
 }

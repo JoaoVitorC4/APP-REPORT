@@ -9,11 +9,11 @@
     <ion-card>
       <ion-item>
         <ion-label>Nome:</ion-label>
-        <ion-input [(ngMoldel)]="name"  [ngModelOptions]="{standalone: true}" formControlName="name"></ion-input>
+        <ion-input formControlName="name"></ion-input>
       </ion-item>
 
       <ion-list>
-        <ion-radio-group [(ngMoldel)]="gender"  [ngModelOptions]="{standalone: true}" formControlName="gender" value="geneno">
+        <ion-radio-group formControlName="gender" value="geneno">
           <ion-list-header>
             <ion-label>Selecione o Genero:</ion-label>
           </ion-list-header>
@@ -37,22 +37,22 @@
 
       <ion-item>
         <ion-label >Data de Nascimento:</ion-label>
-        <ion-input type="date" [(ngMoldel)]="birth"  [ngModelOptions]="{standalone: true}" formControlName="birth"></ion-input>
+        <ion-input type="date" formControlName="birth"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Telefone:</ion-label>
-        <ion-input formControlName="phone" [(ngMoldel)]="phone"  [ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-input formControlName="phone"></ion-input>
       </ion-item> 
 
       <ion-item>
         <ion-label position="floating">Email:</ion-label>
-        <ion-input formControlName="email" [(ngMoldel)]="email"  [ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-input formControlName="email"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Senha:</ion-label>
-        <ion-input type="password" [(ngMoldel)]="password"  [ngModelOptions]="{standalone: true}" formControlName="password"></ion-input>
+        <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
 
       <!-- <ion-item>
@@ -62,7 +62,7 @@
       
       <ion-item>
         <ion-label >Selecione uma foto de perfil</ion-label>
-        <ion-input formControlName="image"[(ngMoldel)]="image"  [ngModelOptions]="{standalone: true}" type="file" aceept accept="image/*"></ion-input>
+        <ion-input formControlName="image" type="file" aceept accept="image/*"></ion-input>
       </ion-item>
     </ion-card>
       <ion-button (click)="cadastraUsuario()" [disabled]="cadastrar.invalid" expand="block" type="submit" color="success">Cadastrar-se</ion-button>
