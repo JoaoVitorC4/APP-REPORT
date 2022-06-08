@@ -36,7 +36,10 @@ export class LoginPage implements OnInit {
     this.userservice.Login(this.login.value).
     then(res => {
       console.log(res)
-      this.rota.navigate([`/tabs/tab1`])
+      if(res){
+        this.rota.navigate([`/tabs/tab1`])
+      }
+      else{console.log('ERROO')}
     }, error => console.error(error));
   }
 
@@ -45,7 +48,7 @@ export class LoginPage implements OnInit {
   private setarFormulario() {
     this.login = this.formBuilder.group({
       email: [ , Validators.required],
-      senha: [ , Validators.required],
+      password: [ , Validators.required],
     });
   }
 
